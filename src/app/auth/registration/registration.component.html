@@ -1,0 +1,28 @@
+<div class="text-center">
+    <form class="form-sign-up">
+        <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email"
+               #emailInput
+               id="inputEmail"
+               class="form-control"
+               placeholder="Email address"
+               required=""
+               autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password"
+               #passwordInput
+               id="inputPassword"
+               class="form-control"
+               placeholder="Password"
+               required="">
+        <button class="btn btn-lg btn-primary btn-block"
+                type="button"
+                (click)="onSignupButtonClicked(emailInput.value, passwordInput.value)">
+            Create account
+        </button>
+        <button class="btn btn-lg btn-primary btn-block sign-in-btn"
+                type="button"
+                [routerLink]="'/login'">Sign in</button>
+    </form>
+</div>
